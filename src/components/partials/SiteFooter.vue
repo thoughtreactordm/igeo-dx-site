@@ -42,7 +42,7 @@
         This site is open source and can be found on
         <a
           class="hover:underline hover:text-orange-300"
-          href="https://github.com/thoughtreactordm/tr2020"
+          href="https://github.com/thoughtreactordm/igeo-dx-site"
           >GitHub</a
         >.
       </p>
