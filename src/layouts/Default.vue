@@ -46,24 +46,4 @@ body {
   color: #85bbc2;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
-
-.button {
-  background-color: #e04a02;
-  color: white;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-
-  transition: all 0.1s ease-in-out;
-
-  &:hover {
-    transform: scale(1.05);
-    background-color: darken(#e04a02, 15%);
-  }
-}
-
-h1,
-h2,
-h3,
-h4 {
-  color: #ea4e02;
-}
 </style>
