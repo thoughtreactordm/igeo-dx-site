@@ -6,9 +6,10 @@ module.exports = {
       use: "gridsome-plugin-tailwindcss",
     },
     {
-      use: '@gridsome/plugin-google-analytics',
+      use: "@gridsome/plugin-google-analytics",
       options: {
-        id: 'UA-47036341-5'
-      }
-    }
+        id: "UA-47036341-5",
+      },
+    },
+  ],
 };
