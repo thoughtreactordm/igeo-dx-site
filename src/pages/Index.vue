@@ -18,10 +18,10 @@
         </g-link>
 
         <h1
-          class="text-center text-3xl lg:w-4/5 font-bold text-yellow-500 leading-none my-16"
+          class="text-center text-2xl md:text-4xl lg:w-3/5 font-bold text-white leading-none my-16"
         >
-          Challenging game where you solve spatial and logic puzzles by pushing
-          and combining like-shapes
+          Solve challenging spatial logic puzzles by pushing and combining
+          like-shapes
         </h1>
 
         <!-- VIDEO -->
@@ -34,6 +34,7 @@
           </div>
         </div>
 
+        <!-- SCREENSHOTS -->
         <div class="screenshots flex justify-around px-2 py-4 md:px-16 md:py-8">
           <a
             v-for="(s, index) in screenshots"
@@ -51,6 +52,7 @@
           </a>
         </div>
 
+        <!-- BODY CONTENT -->
         <div
           class="info-body p-2 py-8 lg:p-16 bg-teal-900 mt-8 text-teal-200 shadow-lg bg-opacity-75 md:border-2 md:border-yellow-500"
         >
@@ -88,12 +90,6 @@
             The game is currently available for free in Open Alpha through
             Itch.io.
           </p>
-
-          <a
-            class="bg-orange-700 hover:bg-yellow-600 text-white py-2 px-6 text-2xl"
-            href="https://thoughtreactor.itch.io/igeo-dx"
-            >Download Now at Itch.io!</a
-          >
         </div>
       </div>
     </section>
