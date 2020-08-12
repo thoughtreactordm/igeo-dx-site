@@ -6,13 +6,23 @@
       @dblclick="$emit('lightbox-close')"
     >
       <div class="absolute right-0 top-0 text-white p-8">
-        <button class="text-white hover:text-yellow-500" @click="$emit('lightbox-close')">
-          <font-awesome-icon :icon="['fas', 'times']" size="2x" class="ml-2"></font-awesome-icon>
+        <button
+          class="text-white hover:text-yellow-500"
+          @click="$emit('lightbox-close')"
+        >
+          <font-awesome-icon
+            :icon="['fas', 'times']"
+            size="2x"
+            class="ml-2"
+          ></font-awesome-icon>
         </button>
       </div>
       <div>
         <div class="p-0 md:p-16">
-          <g-image :src="require(`!!assets-loader!@images/${image}`)"></g-image>
+          <g-image
+            :src="require(`!!assets-loader!@images/${image}`)"
+            quality="100"
+          ></g-image>
         </div>
       </div>
     </div>

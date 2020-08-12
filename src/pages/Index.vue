@@ -1,13 +1,25 @@
 <template>
   <Layout>
-    <lightbox :active="lightbox" :image="currentScreenshot" @lightbox-close="closed" />
+    <lightbox
+      :active="lightbox"
+      :image="currentScreenshot"
+      @lightbox-close="closed"
+    />
     <section class="showcase py-8 w-full">
-      <div class="container mx-auto md:px-16 flex flex-col items-center text-center text-xl">
+      <div
+        class="container mx-auto md:px-16 flex flex-col items-center text-center text-xl"
+      >
         <g-link href="https://igeogame.com" title="IGEO DX Logo">
-          <g-image src="~/assets/img/igeo_logo.png" class="logo p-2 sm:p-0" alt="IGEO DX Logo"></g-image>
+          <g-image
+            src="~/assets/img/igeo_logo.png"
+            class="logo p-2 sm:p-0"
+            alt="IGEO DX Logo"
+          ></g-image>
         </g-link>
 
-        <h1 class="text-center text-3xl lg:w-4/5 font-bold text-yellow-500 leading-none my-16">
+        <h1
+          class="text-center text-3xl lg:w-4/5 font-bold text-yellow-500 leading-none my-16"
+        >
           Challenging game where you solve spatial and logic puzzles by pushing
           and combining like-shapes
         </h1>
@@ -15,7 +27,10 @@
         <!-- VIDEO -->
         <div class="w-full">
           <div class="video w-full p-2 md:px-16">
-            <vimeo id="441158036" class="border-2 border-teal-700 hover:border-yellow-500"></vimeo>
+            <vimeo
+              id="441158036"
+              class="border-2 border-teal-700 hover:border-yellow-500"
+            ></vimeo>
           </div>
         </div>
 
@@ -27,7 +42,7 @@
             class="border-2 border-teal-700 hover:border-yellow-500"
             href="javascript:void(0);"
             @click="openScreenshot(s)"
-            :class="{ 'mr-2': index < (screenshots.length - 1) }"
+            :class="{ 'mr-2': index < screenshots.length - 1 }"
           >
             <g-image
               :src="require(`!!assets-loader!@images/${s}`)"
@@ -41,22 +56,33 @@
         >
           <h2
             class="text-3xl md:text-4xl text-yellow-500 font-black uppercase leading-tight mb-4"
-          >Casual But Challenging</h2>
-          <p
-            class="mb-8 md:text-2xl"
-          >Casual in it's approach but punishing in it's execution, IGEO DX is a fun and rewarding Sokoban-style puzzle game. Mechanically simple but challenging, players will push and combine like-shapes to solve increasingly complex spatial and logic puzzles.</p>
+          >
+            Casual But Challenging
+          </h2>
+          <p class="mb-8 md:text-2xl">
+            Casual in it's approach but punishing in it's execution, IGEO DX is
+            a fun and rewarding Sokoban-style puzzle game. Mechanically simple
+            but challenging, players will push and combine like-shapes to solve
+            increasingly complex spatial and logic puzzles.
+          </p>
 
           <p class="mb-8 md:text-2xl">
             The goal is simple:
-            <strong>clear the board</strong>. To remove shapes from the board players will have to push two of the same shape together. Combining shapes can have different effects and
+            <strong>clear the board</strong>. To remove shapes from the board
+            players will have to push two of the same shape together. Combining
+            shapes can have different effects and
             <em>combining unlike shapes results in a game over</em>.
           </p>
 
-          <p
-            class="mb-16 md:text-2xl"
-          >It's not always so simple! With pits and walls, the player must move precisely to keep from falling off the board or trapping a shape in a tough spot.</p>
+          <p class="mb-16 md:text-2xl">
+            It's not always so simple! With pits and walls, the player must move
+            precisely to keep from falling off the board or trapping a shape in
+            a tough spot.
+          </p>
 
-          <h3 class="text-3xl md:text-4xl text-yellow-500 font-black uppercase">Where Can I Get It?</h3>
+          <h3 class="text-3xl md:text-4xl text-yellow-500 font-black uppercase">
+            Where Can I Get It?
+          </h3>
 
           <p class="text-2xl font-bold mb-2">
             The game is currently available for free in Open Alpha through
@@ -66,7 +92,8 @@
           <a
             class="bg-orange-700 hover:bg-yellow-600 text-white py-2 px-6 text-2xl"
             href="https://thoughtreactor.itch.io/igeo-dx"
-          >Download Now at Itch.io!</a>
+            >Download Now at Itch.io!</a
+          >
         </div>
       </div>
     </section>
@@ -82,7 +109,7 @@ import SiteFooter from "../components/partials/SiteFooter.vue";
 
 export default {
   metaInfo: {
-    title: "Challenging Sokoban-style puzzler",
+    title: "Challenging spatial & logic game",
   },
 
   components: { Vimeo, Lightbox, SiteFooter },

@@ -29,4 +29,45 @@ export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
   Vue.component("font-awesome-icon", FontAwesomeIcon);
+
+  head.meta.push({
+    name: "description",
+    content:
+      "Challenging game where you solve spatial and logic puzzles by pushing and combining like-shapes",
+  });
+
+  head.meta.push({
+    name: "theme-color",
+    content: "#EBBF00",
+  });
+
+  head.meta.push({
+    name: "keywords",
+    content:
+      "puzzle, game, igeo, challenging, logic, isometric, hard games, brain games, brain teaser, pc game",
+  });
+
+  head.script.push({
+    type: "application/ld+json",
+    json: {
+      "@context": "http://schema.org",
+      "@type": "VideoGame",
+      name: "IGEO DX",
+      url: "https://igeogame.com",
+      sameAs: [
+        "https://twitter.com/igeogame",
+        "https://instagram.com/igeodx",
+        "https://store.steampowered.com/app/659360/IGEO_DX/",
+        "https://thoughtreactor.itch.io/igeo-dx",
+      ],
+      author: {
+        "@type": "Organization",
+        name: "Thought Reactor",
+        url: "https://thought-reactor.net",
+      },
+      publisher: "Thought Reactor",
+      genre: ["Puzzle", "Arcade", "Logic"],
+      gamePlatform: ["Microsoft Windows", "Apple MacOS"],
+    },
+  });
 }
