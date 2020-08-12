@@ -11,8 +11,19 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faItchIo } from "@fortawesome/free-brands-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faSteam } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faItchIo, faTwitch, faTwitter, faDiscord, faInstagram, faHeart);
+library.add(
+  faItchIo,
+  faTwitch,
+  faTwitter,
+  faDiscord,
+  faInstagram,
+  faHeart,
+  faTimes,
+  faSteam
+);
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component

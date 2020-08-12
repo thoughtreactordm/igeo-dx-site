@@ -1,45 +1,72 @@
 <template>
   <Layout>
-    <section class="showcase py-8 sm:py-16 w-full">
-      <div class="container mx-auto md:px-16 flex flex-col items-center lg:text-center text-xl">
+    <lightbox :active="lightbox" :image="currentScreenshot" @lightbox-close="closed" />
+    <section class="showcase py-8 w-full">
+      <div class="container mx-auto md:px-16 flex flex-col items-center text-center text-xl">
         <g-link href="https://igeogame.com" title="IGEO DX Logo">
-          <g-image
-            src="~/assets/img/igeo_logo.png"
-            class="logo mb-2 sm:mb-4 p-4 sm:p-0"
-            alt="Thought Reactor Logo"
-          ></g-image>
+          <g-image src="~/assets/img/igeo_logo.png" class="logo p-2 sm:p-0" alt="IGEO DX Logo"></g-image>
         </g-link>
 
-        <div class="info flex flex-col lg:items-center mt-8 text-center">
-          <h1
-            class="text-orange-700 text-4xl md:text-5xl text-shadow leading-tight font-black uppercase"
-          >Play the Alpha</h1>
+        <h1 class="text-center text-3xl lg:w-4/5 font-bold text-yellow-500 leading-none my-16">
+          Challenging game where you solve spatial and logic puzzles by pushing
+          and combining like-shapes
+        </h1>
+
+        <!-- VIDEO -->
+        <div class="w-full">
+          <div class="video w-full p-2 md:px-16">
+            <vimeo id="441158036" class="border-2 border-teal-700 hover:border-yellow-500"></vimeo>
+          </div>
+        </div>
+
+        <div class="screenshots flex justify-around px-2 py-4 md:px-16 md:py-8">
+          <a
+            v-for="(s, index) in screenshots"
+            :key="'ss_' + index"
+            :title="'IGEO Screenshot #' + (index + 1)"
+            class="border-2 border-teal-700 hover:border-yellow-500"
+            href="javascript:void(0);"
+            @click="openScreenshot(s)"
+            :class="{ 'mr-2': index < (screenshots.length - 1) }"
+          >
+            <g-image
+              :src="require(`!!assets-loader!@images/${s}`)"
+              :alt="'IGEO Screenshot #' + (index + 1)"
+            />
+          </a>
+        </div>
+
+        <div
+          class="info-body p-2 py-8 lg:p-16 bg-teal-900 mt-8 text-teal-200 shadow-lg bg-opacity-75 md:border-2 md:border-yellow-500"
+        >
           <h2
-            class="xs:text-2xl sm:text-3xl text-shadow leading-tight font-light uppercase mb-8"
-          >Available for PC and Mac</h2>
+            class="text-3xl md:text-4xl text-yellow-500 font-black uppercase leading-tight mb-4"
+          >Casual But Challenging</h2>
+          <p
+            class="mb-8 md:text-2xl"
+          >Casual in it's approach but punishing in it's execution, IGEO DX is a fun and rewarding Sokoban-style puzzle game. Mechanically simple but challenging, players will push and combine like-shapes to solve increasingly complex spatial and logic puzzles.</p>
 
-          <div class="video w-full p-8 lg:p-16">
-            <vimeo id="441158036"></vimeo>
-          </div>
+          <p class="mb-8 md:text-2xl">
+            The goal is simple:
+            <strong>clear the board</strong>. To remove shapes from the board players will have to push two of the same shape together. Combining shapes can have different effects and
+            <em>combining unlike shapes results in a game over</em>.
+          </p>
 
-          <div class="info-body lg:p-8">
-            <h3
-              class="text-3xl uppercase font-black text-yellow-500"
-            >Casual Approach. Punishing Execution.</h3>
-            <p class="text-2xl my-6">
-              IGEO DX is a
-              <em>Sokoban</em>-style puzzler with mechanically simple but challenging gameplay. Push and combine like-shapes to solve increasingly complex spatial and logic puzzles.
-            </p>
+          <p
+            class="mb-16 md:text-2xl"
+          >It's not always so simple! With pits and walls, the player must move precisely to keep from falling off the board or trapping a shape in a tough spot.</p>
 
-            <p class="text-2xl my-6 mt-16">
-              <strong>The game is currently available for free in Open Alpha through Itch.io.</strong>
-            </p>
+          <h3 class="text-3xl md:text-4xl text-yellow-500 font-black uppercase">Where Can I Get It?</h3>
 
-            <a
-              class="bg-orange-700 hover:bg-yellow-600 text-white py-2 px-6 text-2xl"
-              href="https://thoughtreactor.itch.io/igeo-dx"
-            >Download Now at Itch.io!</a>
-          </div>
+          <p class="text-2xl font-bold mb-2">
+            The game is currently available for free in Open Alpha through
+            Itch.io.
+          </p>
+
+          <a
+            class="bg-orange-700 hover:bg-yellow-600 text-white py-2 px-6 text-2xl"
+            href="https://thoughtreactor.itch.io/igeo-dx"
+          >Download Now at Itch.io!</a>
         </div>
       </div>
     </section>
@@ -50,14 +77,38 @@
 
 <script>
 import Vimeo from "../components/widgets/Vimeo.vue";
+import Lightbox from "../components/widgets/Lightbox.vue";
 import SiteFooter from "../components/partials/SiteFooter.vue";
 
 export default {
   metaInfo: {
-    title: "Challenging Sokoban-style puzzler"
+    title: "Challenging Sokoban-style puzzler",
   },
 
-  components: { Vimeo, SiteFooter }
+  components: { Vimeo, Lightbox, SiteFooter },
+
+  data() {
+    return {
+      screenshots: [
+        "Alpha_SS005.png",
+        "Alpha_SS006.png",
+        "Alpha_SS007.png",
+        "Alpha_SS008.png",
+      ],
+      currentScreenshot: "",
+      lightbox: false,
+    };
+  },
+
+  methods: {
+    openScreenshot(image) {
+      this.currentScreenshot = image;
+      this.lightbox = true;
+    },
+    closed() {
+      this.lightbox = false;
+    },
+  },
 };
 </script>
 
@@ -67,6 +118,18 @@ section.showcase {
 
   div.video-container {
     box-shadow: 0 15px 20px rgba(6, 31, 36, 1);
+  }
+}
+
+.screenshots {
+  a {
+    transition: all 0.1s ease-in-out;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.2);
+    }
   }
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div class="layout">
+    <div class="background"></div>
     <slot />
   </div>
 </template>
@@ -42,8 +43,23 @@ body {
 
   background-position-x: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 
-  color: #85bbc2;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  opacity: 0.35;
+  filter: blur(5px);
+  height: 600px;
+  background-image: url("../assets/img/bg.png");
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: -1;
 }
 </style>
