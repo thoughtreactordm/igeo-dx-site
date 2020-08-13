@@ -13,6 +13,7 @@ import { faItchIo } from "@fortawesome/free-brands-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { faSteam } from "@fortawesome/free-brands-svg-icons";
+import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   faItchIo,
@@ -22,7 +23,8 @@ library.add(
   faInstagram,
   faHeart,
   faTimes,
-  faSteam
+  faSteam,
+  faNewspaper
 );
 
 export default function(Vue, { router, head, isClient }) {

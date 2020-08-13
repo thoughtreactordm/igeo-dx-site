@@ -18,10 +18,10 @@
         </g-link>
 
         <h1
-          class="text-center text-3xl lg:w-4/5 font-bold text-yellow-500 leading-none my-16"
+          class="text-center text-2xl md:text-4xl lg:w-3/5 font-bold text-white leading-none my-16"
         >
-          Challenging game where you solve spatial and logic puzzles by pushing
-          and combining like-shapes
+          Solve challenging spatial logic puzzles by pushing and combining
+          like-shapes
         </h1>
 
         <!-- VIDEO -->
@@ -51,14 +51,29 @@
           </a>
         </div>
 
-        <div
-          class="info-body p-2 py-8 lg:p-16 bg-teal-900 mt-8 text-teal-200 shadow-lg bg-opacity-75 md:border-2 md:border-yellow-500"
+        <div class="mt-16">
+          <a
+            class="bg-orange-700 hover:bg-yellow-600 text-white py-2 px-6 text-2xl"
+            href="https://thoughtreactor.itch.io/igeo-dx"
+            style="text-shadow: none;"
+            >Play Alpha Now at Itch.io!</a
+          >
+        </div>
+
+        <h2
+          class="text-3xl text-white font-black uppercase mb-16 mt-8 leading-tight"
         >
-          <h2
+          COMING TO STEAM DECEMBER 2020
+        </h2>
+
+        <div
+          class="info-body p-2 py-8 lg:p-16 bg-teal-900 mt-8 text-teal-200 shadow-xl bg-opacity-75 md:border-2 md:border-yellow-500"
+        >
+          <h3
             class="text-3xl md:text-4xl text-yellow-500 font-black uppercase leading-tight mb-4"
           >
             Casual But Challenging
-          </h2>
+          </h3>
           <p class="mb-8 md:text-2xl">
             Casual in it's approach but punishing in it's execution, IGEO DX is
             a fun and rewarding Sokoban-style puzzle game. Mechanically simple
@@ -84,16 +99,16 @@
             Where Can I Get It?
           </h3>
 
-          <p class="text-2xl font-bold mb-2">
-            The game is currently available for free in Open Alpha through
+          <p class="text-2xl mb-2">
+            IGEO DX is currently available for free in Open Alpha through
             Itch.io.
           </p>
 
-          <a
-            class="bg-orange-700 hover:bg-yellow-600 text-white py-2 px-6 text-2xl"
-            href="https://thoughtreactor.itch.io/igeo-dx"
-            >Download Now at Itch.io!</a
-          >
+          <p class="text-2xl mb-2 font-bold">
+            WISHLIST ON STEAM - LAUNCHES DECEMBER 2020
+          </p>
+
+          <get-game />
         </div>
       </div>
     </section>
@@ -105,6 +120,7 @@
 <script>
 import Vimeo from "../components/widgets/Vimeo.vue";
 import Lightbox from "../components/widgets/Lightbox.vue";
+import GetGame from "../components/widgets/GetGame.vue";
 import SiteFooter from "../components/partials/SiteFooter.vue";
 
 export default {
@@ -112,7 +128,7 @@ export default {
     title: "Challenging spatial & logic game",
   },
 
-  components: { Vimeo, Lightbox, SiteFooter },
+  components: { Vimeo, Lightbox, GetGame, SiteFooter },
 
   data() {
     return {
