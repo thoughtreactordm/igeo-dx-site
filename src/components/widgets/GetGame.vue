@@ -66,7 +66,7 @@ export default {
           link: "https://store.steampowered.com/app/659360/IGEO_DX/",
         },
       ],
-      currentContent: "Itch.io",
+      currentContent: "Steam",
     };
   },
 

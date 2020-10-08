@@ -51,20 +51,18 @@
           </a>
         </div>
 
-        <div class="mt-16">
-          <a
-            class="bg-orange-700 hover:bg-yellow-600 text-white py-2 px-6 text-2xl"
-            href="https://thoughtreactor.itch.io/igeo-dx"
-            style="text-shadow: none;"
-            >Play Alpha Now at Itch.io!</a
-          >
-        </div>
-
-        <h2
-          class="text-3xl text-white font-black uppercase mb-16 mt-8 leading-tight"
-        >
+        <h2 class="text-3xl text-white font-black uppercase my-8 leading-tight">
           COMING TO STEAM DECEMBER 2020
         </h2>
+
+        <div class="my-8">
+          <a
+            class="bg-orange-700 hover:bg-yellow-600 text-white py-2 px-6 text-2xl"
+            href="https://store.steampowered.com/app/659360/IGEO_DX/"
+            style="text-shadow: none"
+            >Play the Demo on Steam NOW!</a
+          >
+        </div>
 
         <div
           class="info-body p-2 py-8 lg:p-16 bg-teal-900 mt-8 text-teal-200 shadow-xl bg-opacity-75 md:border-2 md:border-yellow-500"
@@ -99,13 +97,17 @@
             Where Can I Get It?
           </h3>
 
-          <p class="text-2xl mb-2">
-            IGEO DX is currently available for free in Open Alpha through
-            Itch.io.
-          </p>
-
           <p class="text-2xl mb-2 font-bold">
             WISHLIST ON STEAM - LAUNCHES DECEMBER 2020
+          </p>
+
+          <p class="text-2xl mb-2">
+            IGEO DX is featured in Steam's <em>Game Fest Autumn Edition</em> -
+            <a
+              class="text-yellow-400 hover:text-white hover:underline"
+              href="https://store.steampowered.com/app/659360/IGEO_DX/"
+              >with a free demo available to play now</a
+            >!
           </p>
 
           <get-game />
