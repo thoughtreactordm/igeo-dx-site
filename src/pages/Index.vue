@@ -52,7 +52,7 @@
         </div>
 
         <h2 class="text-3xl text-white font-black uppercase my-8 leading-tight">
-          COMING TO STEAM FEBRUARY 2021
+          COMING TO STEAM MAY 2021
         </h2>
 
         <div
@@ -89,7 +89,7 @@
           </h3>
 
           <p class="text-2xl mb-2 font-bold">
-            WISHLIST ON STEAM - LAUNCHES FEBRUARY 2021
+            WISHLIST ON STEAM - LAUNCHING MAY 2021
           </p>
 
           <get-game />
