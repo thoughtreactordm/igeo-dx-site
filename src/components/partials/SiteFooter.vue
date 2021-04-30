@@ -4,17 +4,17 @@
 
     <div class="mt-8">
       <div class="flex justify-center">
-        <g-link href="https://thought-reactor.net" title="Thought Reactor">
+        <g-link href="https://mindnumbinteractive.com" title="Thought Reactor">
           <g-image
-            src="~/assets/img/tr_logo.svg"
+            src="~/assets/img/mindnumb_white.svg"
             class="logo p-4 opacity-50 hover:opacity-100"
-            alt="Thought Reactor Logo"
-            style="max-width: 220px; filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.2);"
+            alt="Mindnumb Interactive Logo"
+            style="max-width: 120px; filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.2);"
           ></g-image>
         </g-link>
       </div>
 
-      <p class="font-bold">IGEO DX&copy;{{ year }} Thought Reactor, All Rights Reserved.</p>
+      <p class="font-bold">IGEO DX&copy;{{ year }} Mindnumb Interactive, All Rights Reserved.</p>
 
       <div class="font-bold mt-4 flex items-center justify-center">
         <p>
