@@ -47,12 +47,13 @@
             <g-image
               :src="require(`!!assets-loader!@images/${s}`)"
               :alt="'IGEO Screenshot #' + (index + 1)"
+              :quality="100"
             />
           </a>
         </div>
 
         <h2 class="text-3xl text-white font-black uppercase my-8 leading-tight">
-          COMING TO STEAM OCTOBER 2021
+          COMING TO STEAM APRIL 2022
         </h2>
 
         <div
@@ -89,7 +90,7 @@
           </h3>
 
           <p class="text-2xl mb-2 font-bold">
-            WISHLIST ON STEAM - LAUNCHING OCTOBER 2021
+            WISHLIST ON STEAM - LAUNCHING APRIL 2022
           </p>
 
           <get-game />
